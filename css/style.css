@@ -8,29 +8,53 @@ body {
 /*============= TOP BAR HEADER =============*/
 
 .top-bar {
-  background: orange;
+  background: red;
   height: 2.8rem;
   padding: .5rem 0;
 }
 
 .top-bar a {
-  color: red;
+  color: orange;
   text-decoration: none;
   font-size: 1.1;
 }
 
 /*============= NAVIGATION =============*/
 
+.navbar {
+  background-color: orange!important;
+}
+.navbar-brand img {
+  height: 3rem;
+}
+
+.navbar {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.nav-item {
+  padding: .5rem;
+}
+.nav-link {
+  color: red!important;
+}
+.nav-link.activ,
+.nav-link:hover {
+  color: pink!important;
+}
 
 
-/*============= CAROUSEL =============*/
+.border-primary {
+  border-color: red!important;
+}
 
-
-
-/*---Change Carousel Transition Speed --*/
-
-
-/*-- Carousel Content --*/
+.btn-primary {
+  background-color: red!important;
+  border-color: red!important;
+}
 
 
 
@@ -40,6 +64,14 @@ body {
   overflow: hidden; /*-- Correction for iOS --*/
 }
 
+.fixed {
+  background-image: url('../img/flames.gif');
+  position: fixed;
+}
+.fixed-background {
+  padding: 10rem 0;
+}
+
 
 /*-- Emoji Navbar --*/
 
@@ -47,11 +79,45 @@ body {
 
 /*============= FOOTER =============*/
 
-
+footer {
+  background-color: orange;
+  padding: 1rem 2rem 3rem;
+}
+footer img {
+  height: 3.5rem;
+  margin: 1.5rem auto;
+}
+footer p, footer a  {
+  color: red;
+  text-decoration: none;
+}
+ul.social {
+  list-style-type: none;
+  display: flex;
+  max-width: 16rem;
+  margin: 0 auto;
+  padding: 0;
+}
+ul.social li {
+  margin: 0 auto;
+}
+footer .svg-inline--fa {
+  font-size: 2.3rem;
+}
+footer .svg-inline--fa:hover {
+  color: pink;
+}
 
 /*============= SOCKET =============*/
 
-
+.socket {
+  background-color: orange;
+  border-top: .1rem solid red;
+}
+.socket p, .socket a {
+  color: red;
+  text-decoration: none;
+}
 
 /*============= MEDIA QUERIES =============*/
 

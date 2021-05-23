@@ -6,8 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>PRFN</title>
 	<link rel="shortcut icon" href="img/parafin-logo_32x32.png">
-	<!-- Bootstrap 4.5 CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Bootstrap 5.0 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<!-- Style CSS -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Google Fonts -->
@@ -15,57 +15,66 @@
 </head>
 <body>
 
+	<!-- overlay -->
+
+	<div id="overlay" onclick="off()">
+	<div id="text">
+
+	<ul>
+		<li>Purchase Guide</li>
+		<li>Contract</li>
+		<li>Poocoin Charts</li>
+		<li>About</li>
+		<li>Token Info</li>
+	</ul>
+
+	</div>
+</div>
+
+
+<div id="copy-overlay" onclick="copyoff()">
+<div id="copy-text">
+
+<p>
+	<i class="fas fa-check-circle"></i>
+	Kontraktaddressen <br> kopiert til <br> utklippstavlen din</p>
+
+</div>
+</div>
+
+	<!-- overlay end -->
+
 	<!-- Top Bar -->
+
+<!--
 <div class="top-bar">
 	<div class="container">
-		<div class="col-12 text-right">
+		<div class="col-12">
 			<p><a href="https://poocoin.app/tokens/0x6cc2f5cacf506f149c964feb356d0ca7fb2b6dd1">PRFN PRICE: 0.0002$</a></p>
 		</div>
 	</div>
 </div>
+-->
+
 	<!-- End Top Bar -->
 
 
 	<!-- Navigation -->
-<nav class="navbar bg-light navbar-light navbar-expand-lg">
-	<div class="container">
-		<a  class="navbar-brand"><img src="img/logo.png" alt="PARAFIN" title="Logo">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a href="" class="nav-link active">Guide</a></li>
-					<li class="nav-item"><a href="" class="nav-link">Contract Address</a></li>
-					<li class="nav-item"><a href="" class="nav-link">Poocoin Charts</a></li>
-					<li class="nav-item"><a href="" class="nav-link">Token Info</a></li>
-					<li class="nav-item"><a href="" class="nav-link">About</a></li>
-				</ul>
-
-			</div>
-
-		</a>
-	</div>
+	<nav class="navbar fixed-top navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo.png" alt="" width="32" height="32" class="d-inline-block align-text-center">
+      Parafin
+    </a>
+		<button onclick="on()" class="btn btn-primary me-2" type="button"></button>
+  </div>
 </nav>
+
+
+
 	<!-- End Navigation -->
 
 
-	<!-- Image Carousel -->
-
-
-		<!-- Carousel Content -->
-
-		<!-- End Carousel Content -->
-
-
-		<!-- Previous & Next Buttons -->
-
-		<!-- End Previous & Next Buttons -->
-
-
-	<!-- End Image Carousel -->
 
 
 	<!-- Main Page Heading -->
@@ -75,12 +84,7 @@
 		<p class="lead">Den beste invisteringen i verden</p>
 	</div>
 
-	<!-- Three Column Section -->
 
-	<!-- End Three Column Section -->
-
-
-	<!-- Emoji Navbar First -->
 
 
 	<!-- Start Fixed Background IMG -->
@@ -102,20 +106,41 @@
 	</div>
 	<!-- End Fixed Background IMG -->
 
+<!-- Content -->
 
-	<!-- Emoji Navbar Second -->
+<div class="container content-info">
+
+	<p class="token-desc">
+		Parafin er en token på Binance Smart Chain med et mål om å gjøre deg rik på kunsten du selger, eller bare ved å holde den.
+	</p>
+
+	<div class="kjøpe-block">
+		<h2>Slik kjøper du Parafin</h2>
+		<h3>Last ned og konfigurer MetaMask eller TrustWallet</h3>
+		<p>Download MetaMask (a crypto wallet in form of a browser extension) or TrustWallet (an app for your phone). After that you will have to add the Binance Smart Chain to your network-list. (Click here for a step-by-step tutorial)</p>
+		<h3>Kjøp og send BNB til MetaMask</h3>
+		<p>Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address. BEP-20 addresses start with a "0x"</p>
+		<h3>Gå over til PancakeSwap og Swap for Parafin</h3>
+		<p>Click here to head on over to PancakeSwap or use this address 0xef2ec90e0b8d4cdfdb090989ea1bc663f0d680bf to select Orfano. Set the slippage tolerance to 3% (on error you may change it up to 4%, if that doesn't fix the error, change the Orfano output amount to end with a "0" as the last digit [i.e. 12345.123 => 12340])</p>
+		<h3>Se og HODL Parafin</h3>
+		<p>Swap BNB for Orfano. Now you need to add Orfano to your MetaMask (Tutorial here) to view your Orfano. Lastly HODL!</p>
+	</div>
+
+	<div class="contract-block">
+		<a >
+			<p id="copy-address" onclick="copyon()" onclick="copyElementText(this.id)">0x6cc2f5cacf506f149c964feb356d0ca7fb2b6dd1</p>
+		</a>
+		<p>Klikk på linken for å kopiere kontraktaddressen til utklippstavlen din.
+			<br>Eventuelt kan du klikke <a href="https://bscscan.com/token/0x6cc2f5cacf506f149c964feb356d0ca7fb2b6dd1">her</a> for å se kontrakten på bscscan.com
+		</p>
+	</div>
 
 
-	<!-- Modal Popup -->
-
-
-	<!-- Start Two Column Section -->
-
-	<!-- End Two Column Section -->
+</div>
 
 
 	<!-- Start Jumbotron -->
-	<div class="jumbotron py-5 mb-0">
+	<div class="jumbotron py-5 mb-0 kontaktoss">
 		<div class="container">
 			<div class="row">
 
@@ -165,13 +190,8 @@
 
 
 	<!-- Script Source Files -->
-
-	<!-- jQuery -->
-	<script src="js/jquery-3.5.1.min.js"></script>
-	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 	<!-- Font Awesome -->
 	<script src="js/all.min.js"></script>
 

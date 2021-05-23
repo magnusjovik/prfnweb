@@ -3,14 +3,17 @@ body {
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
   color: #616971;
+  padding-top: 3rem;
 }
 
 /*============= TOP BAR HEADER =============*/
 
+/*
 .top-bar {
   background: red;
-  height: 2.8rem;
+  height: 2.4rem;
   padding: .5rem 0;
+  text-align: right;
 }
 
 .top-bar a {
@@ -18,34 +21,47 @@ body {
   text-decoration: none;
   font-size: 1.1;
 }
+*/
 
 /*============= NAVIGATION =============*/
 
 .navbar {
   background-color: orange!important;
 }
-.navbar-brand img {
-  height: 3rem;
+.navbar-brand {
+  margin: auto;
 }
-
-.navbar {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-.nav-item {
-  padding: .5rem;
-}
-.nav-link {
+.navbar-brand {
   color: red!important;
 }
-.nav-link.activ,
-.nav-link:hover {
-  color: pink!important;
+
+/*navbar overlay*/
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: orange; /* Black background with opacity */
+  z-index: 999999; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
 
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  color: red;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+/*title card*/
 
 .border-primary {
   border-color: red!important;
@@ -55,6 +71,10 @@ body {
   background-color: red!important;
   border-color: red!important;
 }
+
+/*title card*/
+
+
 
 
 
@@ -72,10 +92,63 @@ body {
   padding: 10rem 0;
 }
 
+.content-info {
+  text-align: center;
+  margin: auto;
+}
 
-/*-- Emoji Navbar --*/
 
+/*-- contract info --*/
+#copy-address {
+  color: white;
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  background-color: orange;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+#copy-address:hover {
+  cursor: pointer;
+  background-color: orange;
+}
+#copy-address:active {
+  background-color: white;
+}
 
+#copy-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  z-index: 999999; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#copy-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  font-size: 17px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 2rem  0 .5rem;
+  border-radius: 10px;
+}
+#copy-text .svg-inline--fa {
+  font-size: 6rem;
+  padding-bottom: 1rem;
+}
+
+/*kontakt oss*/
+.kontaktoss {
+  text-align: center;
+  margin: auto;
+}
 
 /*============= FOOTER =============*/
 

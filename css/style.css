@@ -1,10 +1,33 @@
 /*-- Body Reset --*/
 body {
   overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #616971;
   padding-top: 3rem;
 }
+@@font-face {
+  font-family: Parafont-Regular;
+  src:
+      local('Parafont-Regular')
+      url(fonts/Parafont-Regular.ttf);
+  format('truetype');
+
+  font-family: Roboto;
+  src:
+      local('Roboto')
+      url(fonts/Roboto-Regular);
+  format('truetype');
+
+}
+
+/* colors
+#F4CE87
+#DB6B66
+#E08670
+#B85757
+#0D0D0D
+
+*/
 
 /*============= TOP BAR HEADER =============*/
 
@@ -26,13 +49,15 @@ body {
 /*============= NAVIGATION =============*/
 
 .navbar {
-  background-color: orange!important;
+  background-color: #F4CE87!important;
 }
 .navbar-brand {
   margin: auto;
 }
 .navbar-brand {
-  color: red!important;
+  color: #DB6B66!important;
+  font-family: 'Parafont-Regular';
+  font-size: 25px;
 }
 
 /*navbar overlay*/
@@ -45,7 +70,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: orange; /* Black background with opacity */
+  background-color: #F4CE87; /* Black background with opacity */
   z-index: 999999; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
@@ -55,7 +80,7 @@ body {
   top: 50%;
   left: 50%;
   font-size: 40px;
-  color: red;
+  color: #DB6B66;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
@@ -64,12 +89,12 @@ body {
 /*title card*/
 
 .border-primary {
-  border-color: red!important;
+  border-color: #DB6B66!important;
 }
 
 .btn-primary {
-  background-color: red!important;
-  border-color: red!important;
+  background-color: #DB6B66!important;
+  border-color: #DB6B66!important;
 }
 
 /*title card*/
@@ -104,13 +129,13 @@ body {
   text-align: center;
   width: 85%;
   margin: auto;
-  background-color: orange;
+  background-color: #F4CE87;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 #copy-address:hover {
   cursor: pointer;
-  background-color: orange;
+  background-color: #F4CE87;
 }
 #copy-address:active {
   background-color: white;
@@ -153,7 +178,7 @@ body {
 /*============= FOOTER =============*/
 
 footer {
-  background-color: orange;
+  background-color: #F4CE87;
   padding: 1rem 2rem 3rem;
 }
 footer img {
@@ -161,7 +186,7 @@ footer img {
   margin: 1.5rem auto;
 }
 footer p, footer a  {
-  color: red;
+  color: #DB6B66;
   text-decoration: none;
 }
 ul.social {
@@ -178,17 +203,17 @@ footer .svg-inline--fa {
   font-size: 2.3rem;
 }
 footer .svg-inline--fa:hover {
-  color: pink;
+  color: #E08670;
 }
 
 /*============= SOCKET =============*/
 
 .socket {
-  background-color: orange;
-  border-top: .1rem solid red;
+  background-color: #F4CE87;
+  border-top: .1rem solid #DB6B66;
 }
 .socket p, .socket a {
-  color: red;
+  color: #DB6B66  ;
   text-decoration: none;
 }
 
